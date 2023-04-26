@@ -1,6 +1,6 @@
 import React from 'react';
 
-const WeightInput = ({ selectedWeight, onWeightChange }) => {
+const WeightInput = ({ onChange }) => {
   return (
     <div>
       <label htmlFor="weight">体重 (kg): </label>
@@ -10,8 +10,7 @@ const WeightInput = ({ selectedWeight, onWeightChange }) => {
         min="1"
         max="300"
         step="0.1"
-        value={selectedWeight}
-        onChange={onWeightChange}
+        onChange={onChange}
       />
     </div>
   );
