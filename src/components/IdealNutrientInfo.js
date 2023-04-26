@@ -1,9 +1,15 @@
 import React from 'react';
 
-function IdealNutrientInfo({ energy, weight }){
+function IdealNutrientInfo({ energy, weight }) {
   const proteinMin = energy ? (energy * 0.13) / 4 : null;
   const proteinMax = energy ? (energy * 0.2) / 4 : null;
   const histidine = weight ? 10 * weight : null;
+  const isoleucine = weight ? 20 * weight : null;
+  const leucine = weight ? 39 * weight : null;
+  const lysine = weight ? 30 * weight : null;
+  const threonine = weight ? 15 * weight : null;
+  const Tryptophan = weight ? 4 * weight : null;
+  const valine = weight ? 26 * weight : null;
 
   return (
     <div>
@@ -12,22 +18,22 @@ function IdealNutrientInfo({ energy, weight }){
         <li>1. 1日に必要な推定エネルギー: {energy === null ? "" : (energy === -230 ? "計算中..." : `${energy.toFixed(2)} kcal`)}</li>
         <li>2. たんぱく質推奨量: {proteinMin && proteinMax ? `${proteinMin.toFixed(2)}g - ${proteinMax.toFixed(2)}g` : ""}</li>
         <li>　不可欠アミノ酸必要量</li>
-        <li>　　・ヒスチジン: {histidine ? `${histidine.toFixed(2)} mg` : ""}</li>
-        <li>　　・イソロイシン: </li>
-        <li>　　・ロイシン: </li>
-        <li>　　・リシン: </li>
+        <li>　　・ヒスチジン: {histidine ? `${histidine.toFixed(2)} mg` : ""} </li>
+        <li>　　・イソロイシン: {isoleucine ? `${isoleucine.toFixed(2)} mg` : ""} </li>
+        <li>　　・ロイシン: {leucine ? `${leucine.toFixed(2)} mg` : ""} </li>
+        <li>　　・リシン: {lysine ? `${lysine.toFixed(2)} mg` : ""} </li>
         <li>　　・含硫アミノ酸: </li>
         <li>　　・芳香属アミノ酸: </li>
-        <li>　　・トレオニン: </li>
-        <li>　　・トリプトファン: </li>
-        <li>　　・バリン: </li>
+        <li>　　・トレオニン: {threonine ? `${threonine.toFixed(2)} mg` : ""} </li>
+        <li>　　・トリプトファン: {Tryptophan ? `${Tryptophan.toFixed(2)} mg` : ""} </li>
+        <li>　　・バリン: {valine ? `${valine.toFixed(2)} mg` : ""} </li>
         <li>3. 脂質</li>
         <li>　・飽和脂肪酸:</li>
         <li>　・n-6系脂肪酸目安量: </li>
         <li>　・n-3系脂肪酸目安量: </li>
-        <li>　・コレステロール: </li>
+        <li>　・コレステロール: 200mg以下</li>
         <li>4. 炭水化物:</li>
-        <li>　・食物繊維:</li>
+        <li>　・食物繊維: 18〜24g以上</li>
         <li>5. ビタミン</li>
         <li>　・ビタミンA推奨量</li>
         <li>　・ビタミンD目安量</li>
