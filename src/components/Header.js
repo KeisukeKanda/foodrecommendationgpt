@@ -4,7 +4,7 @@ import React from 'react';
 const Header = () => {
   return (
     <header>
-      <h1>Fit Food GPT</h1>
+      <h1>今日の不老の食事 with ChatGPT</h1>
     </header>
   );
 };
