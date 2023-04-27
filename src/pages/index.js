@@ -8,6 +8,7 @@ import WeightInput from '../components/WeightInput';
 import IdealWeightInput from '../components/IdealWeightInput';
 import GoalWeightInput from '../components/GoalWeightInput';
 import ActivityLevelSelect from '../components/ActivityLevelSelect';
+import MenstruationInput from "../components/MenstruationInput";
 import AllergyInput from '../components/AllergyInput';
 import IdealNutrientInfo from '../components/IdealNutrientInfo';
 
@@ -18,6 +19,8 @@ const Home = () => {
   const [weight, setWeight] = useState(null);
   const [goalWeight, setGoalWeight] = useState(null);
   const [activityLevel, setActivityLevel] = useState(1);
+  const [menstruation, setMenstruation] = useState("with");
+
 
   const handleAgeChange = (e) => {
     setAge(e.target.value);
@@ -41,6 +44,10 @@ const Home = () => {
 
   const handleActivityLevelChange = (e) => {
   setActivityLevel(parseInt(e.target.value));
+  };
+
+  const handleMenstruationChange = (e) => {
+    setMenstruation(e.target.value);
   };
 
   const [energy, setEnergy] = useState(null);
@@ -111,8 +118,14 @@ const Home = () => {
       <IdealWeightInput heightInCm={heightInCm} />
       <GoalWeightInput onChange={handleGoalWeightChange} />
       <ActivityLevelSelect onActivityLevelChange={handleActivityLevelChange} />
+      {gender === "female" && age >= 18 && age <= 64 && (
+        <MenstruationInput
+          menstruation={menstruation}
+          onMenstruationChange={handleMenstruationChange}
+        />
+      )}
       <AllergyInput />
-      <IdealNutrientInfo energy={energy} weight={weight} />
+      <IdealNutrientInfo energy={energy} weight={weight} age={age} gender={gender} menstruation={menstruation}/>
       <Footer />
     </div>
   );
