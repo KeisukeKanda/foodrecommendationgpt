@@ -20,7 +20,7 @@ const GeneratedMenu = ({ nutrientInfo }) => {
   };
 
   const getHowToMake = async () => {
-    const prompt = `上記の作り方をそれぞれ具体的に提示して`;
+    const prompt = `上記の作り方・手順をそれぞれ具体的に提示して`;
     const response = await createMenu(prompt);
     setHowToMake(response);
   };
@@ -37,7 +37,7 @@ const GeneratedMenu = ({ nutrientInfo }) => {
       <textarea value={generatedMenu} readOnly style={{ width: "100%", height: "200px", overflow: "auto" }} />
       <button onClick={getHowToMake}>作り方</button>
       <textarea value={howToMake} readOnly style={{ width: "100%", height: "200px", overflow: "auto" }} />
-      <button onClick={getNutrientDetails}>栄養素を見る</button>
+      <button onClick={getNutrientDetails}>含まれる栄養素を見る</button>
       <textarea value={nutrientDetails} readOnly style={{ width: "100%", height: "200px", overflow: "auto" }} />
     </div>
   );
