@@ -12,6 +12,7 @@ import MenstruationInput from "../components/MenstruationInput";
 import AllergyInput from '../components/AllergyInput';
 import IdealNutrientInfo from '../components/IdealNutrientInfo';
 
+
 const Home = () => {
   const [age, setAge] = useState(18);
   const [gender, setGender] = useState("male");
@@ -20,6 +21,7 @@ const Home = () => {
   const [goalWeight, setGoalWeight] = useState(null);
   const [activityLevel, setActivityLevel] = useState(1);
   const [menstruation, setMenstruation] = useState("with");
+  const [nutrientInfo, setNutrientInfo] = useState(null);
 
 
   const handleAgeChange = (e) => {
@@ -50,62 +52,9 @@ const Home = () => {
     setMenstruation(e.target.value);
   };
 
-  const [energy, setEnergy] = useState(null);
-
-  useEffect(() => {
-  const calculateEnergy = () => {
-    let bmr = 0;
-
-    if (gender === 'male') {
-      bmr = 88.362 + 13.397 * weight + 4.799 * heightInCm - 5.677 * age;
-    } else if (gender === 'female') {
-      bmr = 447.593 + 9.247 * weight + 3.098 * heightInCm - 4.330 * age;
-    }
-
-    let multiplier = 0;
-    switch (activityLevel) {
-      case 1:
-        multiplier = 1.2;
-        break;
-      case 2:
-        multiplier = 1.375;
-        break;
-      case 3:
-        multiplier = 1.55;
-        break;
-      case 4:
-        multiplier = 1.725;
-        break;
-      case 5:
-        multiplier = 1.9;
-        break;
-      default:
-        multiplier = 1;
-        break;
-    }
-
-    let energy = bmr * multiplier;
-
-    if (goalWeight !== null) {
-      const weightDifference = goalWeight - weight;
-
-      if (weightDifference <= -1) {
-        energy -= 230;
-      } else if (weightDifference >= 1) {
-        energy += 230;
-      }
-    }
-
-    setEnergy(energy);
+  const handleNutrientInfo = (info) => {
+    setNutrientInfo(info);
   };
-
-  if (age && gender && heightInCm && weight && activityLevel) {
-    calculateEnergy();
-  } else {
-    setEnergy(null);
-  }
-}, [age, gender, heightInCm, weight, goalWeight, activityLevel]);
-
 
 
   return (
@@ -125,7 +74,7 @@ const Home = () => {
         />
       )}
       <AllergyInput />
-      <IdealNutrientInfo energy={energy} weight={weight} age={age} gender={gender} menstruation={menstruation}/>
+      <IdealNutrientInfo heightInCm={heightInCm} weight={weight} goalWeight={goalWeight} age={age} gender={gender} activityLevel={activityLevel} menstruation={menstruation} onNutrientInfo={handleNutrientInfo} nutrientInfo={nutrientInfo} />
       <Footer />
     </div>
   );
