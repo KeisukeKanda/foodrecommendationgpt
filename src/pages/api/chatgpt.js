@@ -116,12 +116,8 @@ export const createMenu = async (prompt) => {
           { role: 'system', content: 'You are a professional nutritionist and chef.' },
           { role: 'user', content: prompt },
         ],
-      // prompt: prompt,
       max_tokens: 600, // 適切なトークン数を設定してください
       temperature: 0.5, // 生成テキストの多様性を制御する値。0.0-1.0の範囲で選択してください
-      // top_p: 1,
-      // frequency_penalty: 0,
-      // presence_penalty: 0,
 
     }, {
       headers: {
