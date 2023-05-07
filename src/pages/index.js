@@ -21,6 +21,7 @@ const Home = () => {
   const [goalWeight, setGoalWeight] = useState(null);
   const [activityLevel, setActivityLevel] = useState(1);
   const [menstruation, setMenstruation] = useState("with");
+  const [allergies, setAllergies] = useState('');
   const [nutrientInfo, setNutrientInfo] = useState(null);
 
 
@@ -52,6 +53,10 @@ const Home = () => {
     setMenstruation(e.target.value);
   };
 
+  const handleAllergyChange = (allergyList) => {
+    setAllergies(allergyList);
+  };
+
   const handleNutrientInfo = (info) => {
     setNutrientInfo(info);
   };
@@ -73,7 +78,7 @@ const Home = () => {
           onMenstruationChange={handleMenstruationChange}
         />
       )}
-      <AllergyInput />
+      <AllergyInput onAllergyChange={handleAllergyChange} />
       <IdealNutrientInfo heightInCm={heightInCm} weight={weight} goalWeight={goalWeight} age={age} gender={gender} activityLevel={activityLevel} menstruation={menstruation} onNutrientInfo={handleNutrientInfo} nutrientInfo={nutrientInfo} />
       <Footer />
     </div>
