@@ -513,6 +513,7 @@ const IdealNutrientInfo = (props) => {
 
       {/* モーダルウィンドウのコンポーネントを追加 */}
       <Modal isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel="Nutrient Info Modal">
+        <h1>1日に必要な栄養</h1>
         <ul>
           <li>1. 1日に必要な推定エネルギー: {nutrientInfo.energy === null ? "" : (nutrientInfo.energy === -230 ? "計算中..." : `${nutrientInfo.energy.toFixed(2)}kcal`)}</li>
           <li>2. たんぱく質推奨量: {nutrientInfo.proteinMin && nutrientInfo.proteinMax ? `${nutrientInfo.proteinMin.toFixed(2)}g - ${nutrientInfo.proteinMax.toFixed(2)}g` : ""}</li>
@@ -565,7 +566,6 @@ const IdealNutrientInfo = (props) => {
         </ul>
         <button onClick={closeModal}>閉じる</button>
       </Modal>
-      <GeneratedMenu nutrientInfo={nutrientInfo} />
     </div>
   );
 };
