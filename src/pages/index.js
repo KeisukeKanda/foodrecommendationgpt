@@ -10,6 +10,8 @@ import GoalWeightInput from '../components/GoalWeightInput';
 import ActivityLevelSelect from '../components/ActivityLevelSelect';
 import MenstruationInput from "../components/MenstruationInput";
 import AllergyInput from '../components/AllergyInput';
+import WantedIngredientsInput from '../components/WantedIngredientsInput';
+import GenerateMenu from '../components/GenerateMenu';
 import IdealNutrientInfo from '../components/IdealNutrientInfo';
 
 
@@ -22,6 +24,7 @@ const Home = () => {
   const [activityLevel, setActivityLevel] = useState(1);
   const [menstruation, setMenstruation] = useState("with");
   const [allergies, setAllergies] = useState('');
+  const [wantedIngredients, setWantedIngredients] = useState('');
   const [nutrientInfo, setNutrientInfo] = useState(null);
 
 
@@ -57,6 +60,10 @@ const Home = () => {
     setAllergies(allergyList);
   };
 
+  const handleWantedIngredientsChange = (ingredientsList) => {
+    setWantedIngredients(ingredientsList);
+  };
+
   const handleNutrientInfo = (info) => {
     setNutrientInfo(info);
   };
@@ -79,7 +86,9 @@ const Home = () => {
         />
       )}
       <AllergyInput onAllergyChange={handleAllergyChange} />
+      <WantedIngredientsInput onWantedIngredientsChange={handleWantedIngredientsChange} />
       <IdealNutrientInfo heightInCm={heightInCm} weight={weight} goalWeight={goalWeight} age={age} gender={gender} activityLevel={activityLevel} menstruation={menstruation} onNutrientInfo={handleNutrientInfo} nutrientInfo={nutrientInfo} />
+      <GenerateMenu nutrientInfo={nutrientInfo} allergies={allergies} wantedIngredients={wantedIngredients} />
       <Footer />
     </div>
   );
