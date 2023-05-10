@@ -507,9 +507,9 @@ const IdealNutrientInfo = (props) => {
   };
 
   return (
-    <div>
+    <div className="flex justify-center">
       {/* 1日に必要な栄養素を見るボタンを追加 */}
-      <button onClick={openModal}>1日に必要な栄養素を見る</button>
+      <button onClick={openModal} className="bg-amber-500 hover:bg-amber-600 text-slate-50 font-bold py-2 px-4 rounded">1日に必要な栄養素を見る</button>
 
       {/* モーダルウィンドウのコンポーネントを追加 */}
       <Modal isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel="Nutrient Info Modal">
@@ -564,7 +564,9 @@ const IdealNutrientInfo = (props) => {
           <li>　・クロム目安量: {nutrientInfo.chromium}μg </li>
           <li>　・モリブデン推奨量: {nutrientInfo.molybdenum}μg </li>
         </ul>
-        <button onClick={closeModal}>閉じる</button>
+        <div className="flex justify-center py-4">
+          <button onClick={closeModal} className="bg-orange-100 hover:bg-orange-200 py-1 px-3 rounded">閉じる</button>
+        </div>
       </Modal>
     </div>
   );
