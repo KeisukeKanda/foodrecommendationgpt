@@ -7,6 +7,7 @@ const ActivityLevelSelect = ({ onActivityLevelChange }) => {
       <select
         id="activity-level"
         onChange={(e) => onActivityLevelChange(e)}
+        className="py-1 px-2"
       >
         <option value="1">ほとんど運動しない</option>
         <option value="2">週に1〜3日程度運動する</option>
@@ -19,4 +20,3 @@ const ActivityLevelSelect = ({ onActivityLevelChange }) => {
 };
 
 export default ActivityLevelSelect;
-

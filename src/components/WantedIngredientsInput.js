@@ -13,7 +13,7 @@ const WantedIngredientsInput = ({ onWantedIngredientsChange }) => {
         type="text"
         id="wantedIngredients"
         onChange={handleInputChange}
-        className="mt-2 w-3/4"
+        className="mt-2 w-3/4 py-1 px-2"
       />
       </div>
     </div>

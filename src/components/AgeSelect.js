@@ -5,7 +5,7 @@ const AgeSelect = ({ age, onAgeChange }) => {
   return (
     <div>
       <label htmlFor="age">年齢: </label>
-      <select id="age" value={age} onChange={onAgeChange}>
+      <select id="age" value={age} onChange={onAgeChange} className="py-1 px-2">
         {Array.from({ length: 73 }, (_, i) => i + 18).map((age) => (
           <option key={age} value={age}>
             {age}

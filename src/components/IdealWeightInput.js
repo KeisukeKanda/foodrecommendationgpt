@@ -14,7 +14,7 @@ const IdealWeightInput = ({ heightInCm }) => {
   return (
     <div>
       <label htmlFor="idealWeight">適正体重 (kg): </label>
-      <input type="text" id="idealWeight" value={idealWeight} readOnly />
+      <input type="text" id="idealWeight" value={idealWeight} readOnly className="py-1 px-2"/>
     </div>
   );
 };

@@ -10,6 +10,7 @@ const MenstruationInput = ({ menstruation, onMenstruationChange }) => {
         id="menstruation"
         value={menstruation}
         onChange={onMenstruationChange}
+        className="py-1 px-2"
       >
         <option value="with">あり</option>
         <option value="without">なし</option>
