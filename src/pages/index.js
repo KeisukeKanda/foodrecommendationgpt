@@ -69,26 +69,6 @@ const Home = () => {
 
 
   return (
-    // <div>
-    //   <AgeSelect age={age} onAgeChange={handleAgeChange} />
-    //   <GenderSelect onGenderChange={handleGenderChange} gender={gender} />
-    //   <HeightInput onChange={handleHeightChange} />
-    //   <WeightInput onChange={handleWeightChange} />
-    //   <IdealWeightInput heightInCm={heightInCm} />
-    //   <GoalWeightInput onChange={handleGoalWeightChange} />
-    //   <ActivityLevelSelect onActivityLevelChange={handleActivityLevelChange} />
-    //   {gender === "female" && age >= 18 && age <= 64 && (
-    //     <MenstruationInput
-    //       menstruation={menstruation}
-    //       onMenstruationChange={handleMenstruationChange}
-    //     />
-    //   )}
-    //   <AllergyInput onAllergyChange={handleAllergyChange} />
-    //   <IdealNutrientInfo heightInCm={heightInCm} weight={weight} goalWeight={goalWeight} age={age} gender={gender} activityLevel={activityLevel} menstruation={menstruation} onNutrientInfo={handleNutrientInfo} nutrientInfo={nutrientInfo} />
-    //   <WantedIngredientsInput onWantedIngredientsChange={handleWantedIngredientsChange} />
-    //   <GenerateMenu nutrientInfo={nutrientInfo} allergies={allergies} wantedIngredients={wantedIngredients} />
-    //   <Footer />
-    // </div>
     <div className="min-h-screen flex flex-col justify-between">
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
