@@ -7,10 +7,10 @@ const Prompt = () => {
       <div className='p-6'>
         <h1 className='underline decoration-amber-500 decoration-4 pb-1 font-semibold'>プロンプトについて</h1>
         <div className='pb-8'>
-          <p>本サービスの機能の一つである食事プランはChatGPTのAPIを用いて、ChatGPTにこちらが設定したプロンプトを投げて、それに対して返ってきたレスポンスを表示する機能です。ここで言うプロンプトとは人工知能（AI）に対する指示の事です。GPTのバージョンは3.5 turboを用いています。</p>
+          <p>本サービスの機能の一つである「食事プランをつくる」はChatGPTのAPIを用いて、ChatGPTにこちらが設定したプロンプトを投げて、それに対して返ってきたレスポンスを表示する機能です。ここで言うプロンプトとは人工知能（AI）に対する指示の事です。GPTのバージョンは3.5 turboを用いています。</p>
           <p>本サービスでプロンプトにどのような内容を設定しているか説明します。</p>
         </div>
-        <h2 className='underline decoration-sky-500 decoration-4 pb-1 font-semibold'>食事プランをつくる</h2>
+        <h2 className='underline decoration-sky-500 decoration-4 pb-1 font-semibold'>食事プラン</h2>
         <div className='pb-8'>
           <p>・CALCULATIONで説明した方法を元に算出した1日に必要な栄養素を完全に満たすように美味しい食事メニューを提案する事。</p>
           <p>・それを朝食、昼食、夕食に分けてそれぞれのメニューと材料を提示する事。</p>
