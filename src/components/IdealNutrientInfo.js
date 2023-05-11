@@ -507,7 +507,7 @@ const IdealNutrientInfo = (props) => {
   };
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center mt-4">
       {/* 1日に必要な栄養素を見るボタンを追加 */}
       <button onClick={openModal} className="bg-amber-500 hover:bg-amber-600 text-slate-50 font-bold py-2 px-4 rounded">1日に必要な栄養素を見る</button>
 

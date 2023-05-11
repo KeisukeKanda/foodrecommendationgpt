@@ -95,21 +95,23 @@ const Home = () => {
           <div className="py-6 md:py-12">
             <div className="grid grid-cols-1 gap-10">
               <div className="space-y-6">
-                <AgeSelect age={age} onAgeChange={handleAgeChange} />
-                <GenderSelect onGenderChange={handleGenderChange} gender={gender} />
-                <HeightInput onChange={handleHeightChange} />
-                <WeightInput onChange={handleWeightChange} />
-                <IdealWeightInput heightInCm={heightInCm} />
-                <GoalWeightInput onChange={handleGoalWeightChange} />
-                <ActivityLevelSelect onActivityLevelChange={handleActivityLevelChange} />
-                {gender === "female" && age >= 18 && age <= 64 && (
-                  <MenstruationInput
-                    menstruation={menstruation}
-                    onMenstruationChange={handleMenstruationChange}
-                  />
-                )}
-                <AllergyInput onAllergyChange={handleAllergyChange} />
-                <IdealNutrientInfo heightInCm={heightInCm} weight={weight} goalWeight={goalWeight} age={age} gender={gender} activityLevel={activityLevel} menstruation={menstruation} onNutrientInfo={handleNutrientInfo} nutrientInfo={nutrientInfo} />
+                <div className='w-11/12 bg-sky-50 rounded-xl p-8 mx-auto space-y-4'>
+                  <AgeSelect age={age} onAgeChange={handleAgeChange} />
+                  <GenderSelect onGenderChange={handleGenderChange} gender={gender} />
+                  <HeightInput onChange={handleHeightChange} />
+                  <WeightInput onChange={handleWeightChange} />
+                  <IdealWeightInput heightInCm={heightInCm} />
+                  <GoalWeightInput onChange={handleGoalWeightChange} />
+                  <ActivityLevelSelect onActivityLevelChange={handleActivityLevelChange} />
+                  {gender === "female" && age >= 18 && age <= 64 && (
+                    <MenstruationInput
+                      menstruation={menstruation}
+                      onMenstruationChange={handleMenstruationChange}
+                    />
+                  )}
+                  <AllergyInput onAllergyChange={handleAllergyChange} />
+                  <IdealNutrientInfo heightInCm={heightInCm} weight={weight} goalWeight={goalWeight} age={age} gender={gender} activityLevel={activityLevel} menstruation={menstruation} onNutrientInfo={handleNutrientInfo} nutrientInfo={nutrientInfo} />
+                </div>
                 <WantedIngredientsInput onWantedIngredientsChange={handleWantedIngredientsChange} />
                 <GenerateMenu nutrientInfo={nutrientInfo} allergies={allergies} wantedIngredients={wantedIngredients} />
               </div>
