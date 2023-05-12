@@ -116,7 +116,7 @@ export const createMenu = async (prompt) => {
           { role: 'system', content: 'あなたはプロのシェフであり、優れた管理栄養士です。' },
           { role: 'user', content: prompt },
         ],
-      max_tokens: 1500, // 適切なトークン数を設定してください
+      max_tokens: 1800, // 適切なトークン数を設定してください
       temperature: 0.8, // 生成テキストの多様性を制御する値。0.0-1.0の範囲で選択してください
 
     }, {
