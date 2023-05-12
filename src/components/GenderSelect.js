@@ -8,7 +8,7 @@ const GenderSelect = ({ gender, onGenderChange }) => {
         id="gender"
         value={gender}
         onChange={onGenderChange}
-        className="py-1 px-2"
+        className="py-1 px-2 w-40"
       >
         <option value="male">男性</option>
         <option value="female">女性</option>

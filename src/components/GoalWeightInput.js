@@ -11,7 +11,7 @@ const GoalWeightInput = ({ onChange }) => {
         max="300"
         step="0.1"
         onChange={onChange}
-        className="py-1 px-2"
+        className="py-1 px-2 w-20"
       />
     </div>
   );
