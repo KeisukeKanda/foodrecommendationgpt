@@ -9,7 +9,7 @@ const About = () => {
         <div className='p-6'>
           <h1 className='underline decoration-amber-500 decoration-4 pb-1 font-semibold'>HealMEの由来について</h1>
           <div className='pb-8'>
-            <p>HealME（ヘルミー）は、healthy mealとheal meの二つの言葉を合わせた名前です。「私たちは何を食べるかで決まる（You are what you eat.）」や「医食同源」という言葉があるように、私たちの身体は食べたもので出来ており、健康を左右するのも食べたもので決まると言っても過言ではありません。健康的な食事は、病気になることを防ぐばかりではなく、不具合があったとしても癒してくれるものにもなりうるということでもあります。そんな健康的な食習慣ができればきっと病気にならず、いつまでも健康で長生きができる。本サービスにはそんな期待を込めてHealMEと名付けました。</p>
+            <p>HealME（ヒールミー）は、healthy mealとheal meの二つの言葉を合わせた名前です。「私たちは何を食べるかで決まる（You are what you eat.）」や「医食同源」という言葉があるように、私たちの身体は食べたもので出来ており、健康を左右するのも食べたもので決まると言っても過言ではありません。健康的な食事は、病気になることを防ぐばかりではなく、不具合があったとしても癒してくれるものにもなりうるということでもあります。そんな健康的な食習慣ができればきっと病気にならず、いつまでも健康で長生きができる。本サービスにはそんな期待を込めてHealMEと名付けました。</p>
           </div>
           <h2 className='underline decoration-amber-500 decoration-4 pb-1 font-semibold'>機能について</h2>
           <div className='pb-8'>
